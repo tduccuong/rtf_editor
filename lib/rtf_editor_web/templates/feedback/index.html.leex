@@ -1,0 +1,12 @@
+<div class="row"><div class="offset-3 col-6">
+  <%=form_for :form_data, "#", [phx_submit: :fd_submitted], fn f ->%>
+    <div class="form-row mb-1"><div class="col-12 my-2">
+      <%= label f, :feedback, do: "feedback" %>
+      <%= textarea f, :feedback, 
+            phx_hook: "RichTxtEditor", phx_update: "ignore",
+            class: "form-control", rows: 5,
+            value: @feedback %>
+    </div></div>
+  <%end%>
+</div></div>
+  
